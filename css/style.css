@@ -234,7 +234,7 @@ a {
   font-size: clamp(1.4rem, 1.7vw, 1.6rem);
 }
 .modal-col-right {
-  height: 20rem;
+  height: 25rem;
   display: grid;
   place-items: center;
   text-align: center;
@@ -246,7 +246,6 @@ a {
   background-color: #b90504;
   border: none;
   border-radius: 50%;
-  padding: 2rem;
   outline: 2px solid #F6F6F6;
   outline-offset: 1rem;
   cursor: pointer;
@@ -254,6 +253,11 @@ a {
 .modal-col-right i {
   font-size: 2rem;
   color: #F6F6F6;
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .modal-overlay {
   position: fixed;

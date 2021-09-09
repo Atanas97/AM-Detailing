@@ -250,7 +250,7 @@ header{padding-top: 5rem;}
         }
     }
     &-col-right{
-        height: 20rem;
+        height: 25rem;
         display: grid;
         place-items: center;
         text-align: center;
@@ -262,7 +262,6 @@ header{padding-top: 5rem;}
             background-color: colors.$red;
             border: none;
             border-radius: 50%;
-            padding: 2rem;
             outline: 2px solid colors.$light-gray;
             outline-offset: 1rem;
             cursor: pointer;
@@ -270,7 +269,11 @@ header{padding-top: 5rem;}
         i {
             font-size: 2rem;
             color: colors.$light-gray;
-           
+            width: 7rem;
+            height: 7rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
     &-overlay {

@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: #F6F6F6;
+  text-decoration: none;
+}
+
+.spacing > * + * {
+  margin: 1rem 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1rem 2rem;
+}
+.header-wrap {
+  background: url(../images/hero-bg.jpeg), rgba(0, 0, 0, 0.55);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 75vh;
+  position: relative;
+}
+.header img {
+  width: 100%;
+  max-width: 25%;
+}
+.header-nav-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: transparent;
+  height: 3rem;
+  width: 4rem;
+  cursor: pointer;
+  border: none;
+}
+.header-mobile-nav {
+  position: absolute;
+  width: 3rem;
+  height: 0.3rem;
+  background: #F6F6F6;
+  transition: 550ms ease-in-out;
+}
+.header-mobile-nav::before, .header-mobile-nav::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 0.3rem;
+  transition: 550ms ease-in-out transform;
+  background: #F6F6F6;
+}
+.header-mobile-nav::before {
+  transform: translateY(1rem);
+}
+.header-mobile-nav::after {
+  transform: translateY(-1rem);
+}
+.header-mobile-nav.active::before {
+  transition: 550ms ease-in-out transform;
+  transform: rotate(45deg) translate(3.5rem, -3.5rem);
+}
+.header-mobile-nav.active::after {
+  transform: rotate(-45deg) translate(3.5rem, 3.5rem);
+}
+.header-mobile-nav.active {
+  transform: translateX(-5rem);
+  background: transparent;
+}
+.header-navbar ul {
+  position: absolute;
+  z-index: 111;
+  background: #ffffff38;
+  top: 100%;
+  left: 20%;
+  width: 60%;
+  transform: translateY(-200%);
+  transition: 550ms ease-in-out transform;
+  border-radius: 0.25rem;
+}
+.header-navbar ul a {
+  padding: 1rem 2rem;
+  display: block;
+  font-size: clamp(1.7rem, 2vw, 2rem);
+}
+.header-navbar ul.active {
+  transform: translateY(0);
+}
+.header-contact-desktop {
+  display: none;
+}
+.header-contact-mobile {
+  color: #F6F6F6;
+  font-size: clamp(2.5rem, 2vw, 2rem);
+}
+
+@media screen and (min-width: 45rem) {
+  header {
+    padding-top: 5rem;
+  }
+
+  .header {
+    justify-content: space-around;
+    border: 1px solid #F6F6F657;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 1rem;
+  }
+  .header-wrap {
+    min-height: 100vh;
+  }
+  .header img {
+    width: 10%;
+  }
+  .header-nav-btn {
+    display: none;
+  }
+  .header-navbar ul {
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .header-navbar ul li {
+    position: relative;
+  }
+  .header-navbar ul li::after {
+    position: absolute;
+    content: "";
+    top: 90%;
+    transform: scale(0, 0);
+    transform-origin: left center;
+    height: 0.3rem;
+    width: 100%;
+    background: #b90504;
+    transition: 250ms ease-in-out transform;
+  }
+  .header-navbar ul li:hover::after {
+    transform: scale(1, 1);
+  }
+  .header-navbar ul a {
+    padding: 0.25rem;
+  }
+  .header-contact-desktop {
+    display: inline-block;
+    color: #F6F6F6;
+    font-size: 2rem;
+  }
+  .header-contact-mobile {
+    display: none;
+  }
+}
+.hero {
+  text-align: center;
+}
+.hero-headings {
+  position: absolute;
+  bottom: 20%;
+  color: #F6F6F6;
+  width: 100%;
+}
+.hero-headings h2 {
+  font-size: clamp(3rem, 4vw, 5.6rem);
+  font-family: "Uncial Antiqua", cursive;
+  text-transform: uppercase;
+}
+.hero-headings p {
+  font-family: "Telex", sans-serif;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: bold;
+}
+
+.main-carousel {
+  margin-top: 5rem;
+}
+
+.carousel-cell img {
+  width: 100%;
+}
+
+.carousel-cell {
+  width: 100%;
+  margin: 0 auto;
+  margin-right: 10px;
+  border-radius: 5px;
+}/*# sourceMappingURL=style.css.map */

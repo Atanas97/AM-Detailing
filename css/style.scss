@@ -183,7 +183,7 @@ header{padding-top: 5rem;}
     }
 }
 
-//Hero section from 122 to X 
+//Hero section from 122 to 207
 .hero {
     text-align: center;
     
@@ -219,11 +219,22 @@ header{padding-top: 5rem;}
   margin-right: 10px;
   border-radius: 5px;
 }
+@media screen and (min-width: 45rem){
+    .carousel-cell {
+        width: 66%;
+    }
+    .next{
+        left: 75%;
+    }
+    .previous{
+        left: 20% !important;
+    }
+}
 
 //Modal section from 223 to X
 .modal {
     margin-top: 5rem;
-
+    position: relative;
     &-col-left{
         background-color: colors.$red;
         padding: 2rem;
@@ -253,12 +264,67 @@ header{padding-top: 5rem;}
             border-radius: 50%;
             padding: 2rem;
             outline: 2px solid colors.$light-gray;
-            outline-offset: .5rem;
+            outline-offset: 1rem;
+            cursor: pointer;
         }
         i {
-            font-size: 5rem;
+            font-size: 2rem;
             color: colors.$light-gray;
            
+        }
+    }
+    &-overlay {
+        position: fixed;
+        z-index: -1;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.75);
+        // transform: scale(0, 0);
+        opacity: 0;
+        transition: 500ms opacity ease-in-out;
+        transform-origin: center center;
+
+        .modal-iframe{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            i {
+                font-size: 3rem;
+                color: colors.$light-gray;
+                padding: 1rem .25rem;
+                cursor: pointer;
+            }
+
+            iframe{
+                border-radius: .5rem;
+                // width: 100rem;
+                // height: 50rem;
+                // max-width: 60vw;
+                width: 80vw;
+                height: 70vh;
+                @supports(aspect-ratio: 16 / 9){
+                    iframe{aspect-ratio: 16 / 9;}
+                }
+            }
+        }
+    }
+    &-overlay.open{
+        //transform: scale(1,1);
+        opacity: 1;
+        z-index: 1;
+    }
+}
+@media screen and (min-width: 45rem){
+    .modal {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+
+        &-col-right{
+            height: 40rem;
         }
     }
 }

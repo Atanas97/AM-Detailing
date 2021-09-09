@@ -22,7 +22,7 @@
         <header>
             <div class="header">
 
-                <img src="./images/logocut.png" alt="am-detailing logo">
+                <img src="./images/logo.png" alt="am-detailing logo">
 
                 <button class="header-nav-btn" id="nav-btn">
                     <span class="header-mobile-nav " id="mobile-nav"></span>
@@ -76,11 +76,17 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quaerat eligendi quibusdam, corporis nam modi.</p>
             </div>
             <div class="modal-col-right">
-                <button><i class="fas fa-play"></i></button>
+                <button><i class="fas fa-play" id="open-modal"></i></button>
             </div>
-            
+            <div class="modal-overlay" id="overlay">
+                <div class="modal-iframe">
+                    <i class="fas fa-times" id="close-modal"></i>
+                    <iframe src="https://www.youtube.com/embed/Sj2baALFBII" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
     </section>
+
     <div style="height: 100rem; background-color: aqua;"></div>
     </main>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>

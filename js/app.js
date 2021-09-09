@@ -27,5 +27,21 @@ openBtn.addEventListener('click', openNav)
 
 var flkty = new Flickity('.main-carousel', {
     // options
-    wrapAround: true
+    wrapAround: true,
+    autoPlay: true
 });
+
+
+//Modal functionality
+const modalOpenBtn = document.getElementById('open-modal')
+const modalCloseBtn = document.getElementById('close-modal')
+const overlay = document.getElementById('overlay')
+
+modalOpenBtn.addEventListener('click', ()=> {
+    console.log('hello')
+    overlay.classList.add('open')
+})
+
+modalCloseBtn.addEventListener('click', ()=> {
+    overlay.classList.remove('open')
+})

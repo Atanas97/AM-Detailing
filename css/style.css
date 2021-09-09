@@ -189,7 +189,7 @@ a {
 }
 
 .main-carousel {
-  margin-top: 5rem;
+  margin: 5rem 0;
 }
 
 .carousel-cell img {
@@ -201,4 +201,42 @@ a {
   margin: 0 auto;
   margin-right: 10px;
   border-radius: 5px;
+}
+
+.modal {
+  margin-top: 5rem;
+}
+.modal-col-left {
+  background-color: #b90504;
+  padding: 2rem;
+  color: #F6F6F6;
+  text-align: center;
+}
+.modal-col-left h3 {
+  font-size: clamp(1.8rem, 2vw, 3.5rem);
+  text-transform: capitalize;
+}
+.modal-col-left p {
+  font-size: clamp(1.4rem, 1.7vw, 1.6rem);
+}
+.modal-col-right {
+  height: 20rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: url(../images/detailing-bg.jpg) no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+.modal-col-right button {
+  background-color: #b90504;
+  border: none;
+  border-radius: 50%;
+  padding: 2rem;
+  outline: 2px solid #F6F6F6;
+  outline-offset: 0.5rem;
+}
+.modal-col-right i {
+  font-size: 5rem;
+  color: #F6F6F6;
 }/*# sourceMappingURL=style.css.map */

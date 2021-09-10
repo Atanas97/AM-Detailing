@@ -34,7 +34,7 @@ a {
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  min-height: 75vh;
+  min-height: 70vh;
   position: relative;
 }
 .header img {
@@ -176,6 +176,7 @@ a {
   bottom: 20%;
   color: #F6F6F6;
   width: 100%;
+  transition: 550ms ease-in-out transform;
 }
 .hero-headings h2 {
   font-size: clamp(3rem, 4vw, 5.6rem);
@@ -238,7 +239,8 @@ a {
   display: grid;
   place-items: center;
   text-align: center;
-  background: url(../images/detailing-bg.jpg) no-repeat;
+  background: url(../images/detailing-bg.jpg) rgba(0, 0, 0, 0.4) no-repeat;
+  background-blend-mode: multiply;
   background-size: 100% 100%;
   background-attachment: fixed;
 }

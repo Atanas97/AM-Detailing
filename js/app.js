@@ -2,13 +2,17 @@
 const openBtn = document.getElementById('nav-btn')
 const openMenu = document.getElementById('nav-menu')
 const mobileNav = document.getElementById('mobile-nav')
+const heroHeadings = document.querySelector('.hero-headings')
 const openNav = () => {
     openMenu.classList.toggle('active')
 
     if (openMenu.classList.contains('active')) {
         mobileNav.classList.add('active')
+        heroHeadings.style.bottom = '10%'
+        heroHeadings.style.transition = '550ms ease-in-out'
     } else {
         mobileNav.classList.remove('active')
+        heroHeadings.style.bottom = '20%'
     }
 }
 
@@ -36,12 +40,16 @@ var flkty = new Flickity('.main-carousel', {
 const modalOpenBtn = document.getElementById('open-modal')
 const modalCloseBtn = document.getElementById('close-modal')
 const overlay = document.getElementById('overlay')
-
+const iframe = document.getElementById('iframe')
 modalOpenBtn.addEventListener('click', ()=> {
-    console.log('hello')
     overlay.classList.add('open')
 })
 
 modalCloseBtn.addEventListener('click', ()=> {
     overlay.classList.remove('open')
+    stopVideo();
 })
+function stopVideo() {
+  var currentIframe = document.querySelector('#iframe');
+  currentIframe.src = currentIframe.src;
+}

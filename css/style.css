@@ -7,6 +7,7 @@
 
 html {
   font-size: 62.5%;
+  background: #F6F6F6;
 }
 
 li {
@@ -20,6 +21,15 @@ a {
 
 .spacing > * + * {
   margin: 1rem 0;
+}
+
+.btn {
+  display: inline-block;
+  background: #b90504;
+  padding: 1.1rem 1.75rem;
+  border-radius: 0.6rem;
+  font-size: 1.3rem;
+  box-shadow: 0px 5px 17px -5px rgba(196, 15, 15, 0.5);
 }
 
 .header {
@@ -307,5 +317,107 @@ a {
   }
   .modal-col-right {
     height: 40rem;
+  }
+}
+.services {
+  width: 90vw;
+  margin: 5rem auto;
+}
+.services-container {
+  display: grid;
+  gap: 3rem;
+}
+.services h2 {
+  margin-bottom: 5rem;
+  text-align: center;
+  color: #333;
+  font-size: clamp(3rem, 3vw, 4.5rem);
+}
+.services-card {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 0.6rem;
+  text-align: center;
+}
+.services-card img {
+  width: 100%;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 1rem;
+}
+.services-card small {
+  color: #b90504;
+  font-size: clamp(1.4rem, 1.8vw, 1.3rem);
+}
+.services-card h3 {
+  color: #333;
+  font-size: clamp(1.8rem, 2vw, 2rem);
+  font-weight: 700;
+}
+.services-card p {
+  font-size: clamp(1.35rem, 1vw, 1.3rem);
+  max-width: 70%;
+  margin-inline: auto;
+}
+.services-card a {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 45rem) {
+  .services-container {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+}
+.contacts h2 {
+  margin: 5rem 0;
+  text-align: center;
+  color: #333;
+  font-size: clamp(3rem, 3vw, 4.5rem);
+}
+.contacts-left-col {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #1d1d1d;
+  padding: 2rem;
+  color: #F6F6F6;
+  flex: 1;
+}
+.contacts-left-col address,
+.contacts-left-col a {
+  font-size: 1.3rem;
+}
+.contacts-left-col i {
+  padding-right: 0.5rem;
+  color: #990100;
+}
+.contacts-left-col .first-el {
+  display: block;
+  margin-bottom: 3rem;
+}
+.contacts-right-col {
+  background: #C4C4C4;
+  flex: 2;
+}
+.contacts-right-col iframe {
+  width: 100%;
+  height: 30rem;
+  padding: 2rem;
+  border-radius: 3rem;
+}
+
+@media screen and (min-width: 45rem) {
+  .contacts-container {
+    display: flex;
+  }
+
+  .contacts-left-col {
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .contacts-right-col {
+    flex: 2;
   }
 }/*# sourceMappingURL=style.css.map */

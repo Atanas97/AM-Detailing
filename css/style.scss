@@ -8,7 +8,7 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
-html{font-size: 62.5%;}
+html{font-size: 62.5%; background: colors.$light-gray;}
 li {list-style-type: none;}
 a {
     color: colors.$light-gray;
@@ -16,6 +16,14 @@ a {
 }
 
 .spacing > * + * {margin: 1rem 0;}
+.btn {
+    display: inline-block;
+    background: colors.$red;
+    padding: 1.1rem 1.75rem;
+    border-radius: .6rem;
+    font-size: 1.3rem;
+    box-shadow: 0px 5px 17px -5px rgba(196, 15, 15, 0.5);
+}
 
 .header{
     display: flex;
@@ -325,11 +333,119 @@ header{padding-top: 5rem;}
 }
 @media screen and (min-width: 45rem){
     .modal {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
 
         &-col-right{
             height: 40rem;
         }
     }
 }
+//Services styling from 345 to X
+.services {
+    width: 90vw;
+    margin: 5rem auto;
+
+    &-container{
+        display:grid;
+        gap: 3rem;
+    }
+
+    h2{
+        margin-bottom: 5rem;
+        text-align: center;
+        color: colors.$gray;
+        font-size: clamp(3rem, 3vw, 4.5rem);
+    }
+    &-card {
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+        border-radius: .6rem;
+        text-align: center;
+
+        img{
+            width: 100%;
+            border-radius: .6rem;
+            overflow: hidden;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            
+        }
+
+        small {
+            color: colors.$red;
+            font-size: clamp(1.4rem, 1.8vw, 1.3rem);
+        }
+        h3{
+            color: colors.$gray;
+            font-size: clamp(1.8rem, 2vw, 2rem);
+            font-weight: 700;
+        }
+        p {
+            font-size: clamp(1.35rem, 1vw, 1.3rem);
+            max-width: 70%;
+            margin-inline: auto;
+        }
+        a{margin-bottom: 2rem;}
+
+    }
+}
+@media screen and (min-width:45rem) {
+    .services-container {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+}
+
+//Contacts section styles from 337 to X
+.contacts {
+    
+    h2 {
+        margin: 5rem 0;
+        text-align: center;
+        color: colors.$gray;
+        font-size: clamp(3rem, 3vw, 4.5rem);
+    }
+
+    &-left-col{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: #1d1d1d;
+        padding: 2rem;
+        color: colors.$light-gray;
+        flex: 1;
+        address,
+        a{
+            font-size: 1.3rem;
+        }
+        i{padding-right: .5rem; color: colors.$dark-red;}
+        .first-el {
+            display: block;
+            margin-bottom: 3rem;
+        }
+    }
+    &-right-col {
+        background: #C4C4C4;
+        flex: 2;
+        iframe{
+            width: 100%;
+            height: 30rem;
+            padding: 2rem;
+            border-radius: 3rem;
+        }
+    }
+}
+
+@media screen and (min-width: 45rem) {
+    .contacts-container{
+        display: flex;
+
+    }
+    .contacts-left-col{
+        flex-direction: column;
+        flex: 1;
+    }
+    .contacts-right-col{
+        flex: 2;
+    }
+}
+
